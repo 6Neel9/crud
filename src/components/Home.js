@@ -14,9 +14,11 @@ function Home() {
     }, [blogs])
 
     const handleDelete = (blogOutIndex) => {
-        const _blogs = blogs.filter((blog, blogInIndex) => {
+        const _blogs = blogs.filter((blog, blogInIndex,arr) => {
             if (blogInIndex !== blogOutIndex) {
                 return blog
+            }else{
+                return arr
             }
         })
         console.log(_blogs)
